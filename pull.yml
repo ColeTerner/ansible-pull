@@ -19,4 +19,9 @@
         echo "BOSS" | sudo tee -a /opt/pull
         echo "teeboo" | sudo tee -a /opt/pull
       become: yes
-      
+
+    - name: check internet
+      copy:
+        src:  file.txt
+        dest:  /home/{{ansible_user}}/
+      become: yes
