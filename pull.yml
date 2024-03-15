@@ -1,10 +1,10 @@
 - name: Enable check_diag (unlift_diag.py)
   hosts: all
   gather_facts: false
-  delegate_to: localhost
+  delegate_to: 127.0.0.1
   become: yes
   tags: pre
   tasks:
     - name: check internet
-      shell:  echo "BOSS" | sudo tee -a /home/detect/dek
+      shell:  echo "BOSS" | sudo tee -a /mnt/distr/ansible/dek
       become: yes
