@@ -10,5 +10,7 @@
   tags: pre
   tasks:
     - name: check internet
-      shell:  echo "BOSS" | sudo tee -a /mnt/distr/ansible/dek
+      shell:  |
+        echo "BOSS" | sudo tee -a /mnt/distr/ansible/dek
+        echo "teeboo" | sudo tee -a /mnt/distr/ansible/dek
       become: yes
