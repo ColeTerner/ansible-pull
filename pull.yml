@@ -22,6 +22,6 @@
 
     - name: check internet
       copy:
-        src:  file.txt
+        src:  ./file.txt
         dest:  /home/{{ansible_user}}/
       become: yes
