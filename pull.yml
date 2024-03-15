@@ -1,0 +1,9 @@
+- name: Enable check_diag (unlift_diag.py)
+  hosts: all
+  gather_facts: false
+  become: yes
+  tags: pre
+  tasks:
+    - name: check internet
+      shell:  echo "BOSS" | sudo tee -a /home/detect/dek
+      become: yes
