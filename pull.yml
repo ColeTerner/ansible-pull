@@ -3,7 +3,6 @@
   gather_facts: false
   vars:
     ansible_user:  detect
-    become-user:  root
     ansible_password:  detect-pwd
     ansible_become_pass:  detect-pwd
     ansible_sudo_pass:  detect-pwd
