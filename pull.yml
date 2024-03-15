@@ -7,10 +7,16 @@
     ansible_become_pass:  detect-pwd
     ansible_sudo_pass:  detect-pwd
   become: yes
-  tags: pre
   tasks:
     - name: check internet
       shell:  |
         echo "BOSS" | sudo tee -a /mnt/distr/ansible/dek
         echo "teeboo" | sudo tee -a /mnt/distr/ansible/dek
       become: yes
+
+    - name: check internet
+      shell:  |
+        echo "BOSS" | sudo tee -a /opt/pull
+        echo "teeboo" | sudo tee -a /opt/pull
+      become: yes
+      
