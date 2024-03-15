@@ -1,7 +1,6 @@
 - name: Enable check_diag (unlift_diag.py)
-  hosts: all
+  hosts: 127.0.0.1
   gather_facts: false
-  delegate_to: 127.0.0.1
   become: yes
   tags: pre
   tasks:
